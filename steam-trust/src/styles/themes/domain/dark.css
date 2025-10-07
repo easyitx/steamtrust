@@ -1,0 +1,19 @@
+html[class="dark"] {
+    /* Backgrounds */
+    --blue-1: #121422;
+    --blue-2: #131524;
+    --blue-3: #191B2D;
+    --blue-4: #282C44;
+    --blue-5: #343854;
+    --blue-6: #0E101C;
+
+    --green: #8CBE3B;
+    --destructive: #be463b;
+
+    --gray: #C5C8E1;
+    --gray-2: #71748C;
+    --gray-3: #71748C;
+    --gray-4: #24273D;
+
+    --foreground: #FFFFFF;
+}

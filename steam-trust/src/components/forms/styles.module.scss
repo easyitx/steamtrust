@@ -1,0 +1,143 @@
+@import "mixins";
+
+.payForm {
+  background: var(--blue-3);
+  padding: var(--space);
+  border-radius: calc(var(--border-radius) * 2);
+  border: 1px solid #1D2032;
+  width: 100%;
+
+  @include laptop {
+    padding: calc(var(--space) * 2);
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    font-weight: 800;
+  }
+
+  .form {
+    padding-top: 22px;
+
+    @include laptop {
+      padding-top: 32px;
+    }
+
+    .fields {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--gap) / 2);
+      padding: 12px 0;
+
+      .steamNameInput {
+        position: relative;
+
+        .steamNameInputLabel {
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: var(--gray-3);
+        }
+      }
+
+      .emailInput {}
+
+      .summInput {
+        position: relative;
+
+        .input {
+          padding-left: 43px;
+        }
+
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: 12px;
+          transform: translateY(-40%);
+        }
+      }
+
+      .placeholders {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--gap) / 2);
+      }
+    }
+
+    .promocode {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--gap) / 2);
+      border-radius: calc(var(--border-radius) * 2);
+      padding: calc(var(--space) * 2);
+      background: linear-gradient(118.81deg, #3F4F32 3.14%, #8CBE3B 85.88%);
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("/iconssbg.png");
+        background-size: cover;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--gap) / 2);
+      }
+
+      .promoInput {
+        position: relative;
+
+        .input {
+          background: #1E232E;
+          padding-block: 24px;
+          padding-right: 140px;
+        }
+
+        .button {
+          position: absolute;
+          top: 50%;
+          right: 12px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .banner {
+    margin-top: 10px;
+
+    .bannerImage {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 22px;
+    }
+  }
+}
+
+.label {
+  color: var(--gray-3);
+  text-transform: uppercase;
+}
+
+.label2 {
+  color: var(--gray-3);
+  text-transform: uppercase;
+  margin-top: 32px;
+}
+
+.errorText {
+    color: var(--error-color, #e74c3c);
+    margin-top: 4px;
+    display: block;
+}

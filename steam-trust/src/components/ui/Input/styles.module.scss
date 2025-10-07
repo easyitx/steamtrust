@@ -1,0 +1,30 @@
+.input {
+  display: flex;
+  height: 3.5rem;
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: 1px solid #1D2032;
+  background-color: var(--blue-4);
+  padding: 0.5rem 1rem;
+  transition: .25s ease-in-out;
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  &:hover {
+
+  }
+}
+
+.input:focus-visible {
+  outline: none;
+  border: 1px solid var(--green);
+}
+
+.input::placeholder {
+  color: var(--gray);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

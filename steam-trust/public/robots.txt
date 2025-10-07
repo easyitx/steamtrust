@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /$
+Allow: /faq$
+Allow: /support$
+Disallow: /pay/fail$
+Disallow: /pay/success$
+Disallow: /profile$
+Disallow: /admin
+Disallow: /tmp
+Disallow: /cgi-bin
+Sitemap: https://steamtrust.ru/sitemap.xml

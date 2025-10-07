@@ -1,0 +1,109 @@
+@import "mixins";
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+
+  @include tablets {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 3rem;
+  }
+
+  @include desktop {
+    gap: 4rem;
+  }
+
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
+    @include tablets {
+      width: 45%;
+      max-width: none;
+    }
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  .paymentDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: -1rem;
+
+    @include phones {
+      margin-top: -1.5rem;
+    }
+
+    @include tablets {
+      align-items: flex-start;
+      margin-top: 0;
+      width: 45%;
+    }
+
+    @include desktop {
+      width: 40%;
+    }
+
+    .desc {
+      color: #71748C;
+      max-width: 90%;
+
+      @include phones {
+        max-width: 80%;
+      }
+
+      @include tablets {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+    width: 100%;
+
+    @include phones {
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .item {
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      img {
+        width: 28px;
+        height: 28px;
+
+        @include phones {
+          width: 32px;
+          height: 32px;
+        }
+
+        @include tablets {
+          width: 34px;
+          height: 34px;
+        }
+      }
+    }
+  }
+}

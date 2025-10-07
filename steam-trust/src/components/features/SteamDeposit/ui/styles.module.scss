@@ -1,0 +1,13 @@
+@import "mixins";
+
+.steamDeposit {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: calc(var(--gap) / 2);
+  width: 100%;
+
+  @include laptop() {
+    gap: var(--gap);
+    grid-template-columns: 1fr 1fr;
+  }
+}

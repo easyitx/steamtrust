@@ -1,0 +1,46 @@
+@import "mixins";
+
+.DialogRoot {
+  z-index: 999;
+}
+
+.DialogTrigger {
+
+}
+
+.DialogOverlay {
+  background: rgba(18, 20, 34, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+}
+
+.DialogContent {
+  position: relative;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: calc(var(--border-radius) * 2);
+  //background: var(--blue-1);
+
+  @include laptop() {
+    padding: 30px;
+  }
+}
+
+.DialogTitle {
+  font-size: 1.175rem;
+}
+
+.DialogDescription {
+  font-size: 0.875rem;
+  margin-top: calc(var(--space) / 4);
+}
+
+.DialogClose {
+
+}

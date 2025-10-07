@@ -1,0 +1,14 @@
+.formSection {
+    margin-bottom: 24px;
+}
+
+.title {
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+} 

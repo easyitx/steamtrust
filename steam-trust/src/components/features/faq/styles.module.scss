@@ -1,0 +1,17 @@
+.faq {
+  background: var(--blue-1);
+  border-radius: calc(var(--blue-radius) * 2);
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--gap) / 2);
+  }
+
+  .accordions {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) / 2);
+    margin-top: var(--space);
+  }
+}

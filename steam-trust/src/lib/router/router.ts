@@ -1,0 +1,5 @@
+export const getRouteMain = () => '/'
+export const getRouteFaq = () => '/faq'
+export const getRouteSupport = () => '/support'
+export const getRouteAgreement = () => '/pages/agreement'
+export const getRoutePrivacyPolicy = () => '/pages/privacy-policy' 

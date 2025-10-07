@@ -1,0 +1,25 @@
+.segmentedControlRoot {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  background: var(--gray-4);
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+}
+
+.segmentedControlItem {
+  padding: var(--padding-ui-lg);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: .2s ease;
+  font-size: 0.875rem;
+  text-wrap: nowrap;
+
+  &.active {
+    background: var(--gray-5);
+  }
+
+  &:hover {
+    background: var(--gray-5);
+  }
+}

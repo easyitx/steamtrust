@@ -1,0 +1,22 @@
+.CheckboxRoot {
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  border: 1px solid var(--gray-7);
+  border-radius: 4px;
+  background: var(--gray-2);
+}
+
+.CheckboxIndicator {}
+
+.CheckboxSection {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gap) / 2);
+
+  label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--gray);
+  }
+}

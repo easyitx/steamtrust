@@ -1,0 +1,29 @@
+.textarea {
+  display: flex;
+  height: 7.5rem;
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--input-border-color);
+  background-color: var(--gray-2);
+  padding: var(--padding-ui-default);
+  transition: .25s ease-in-out;
+  font-size: 0.875rem;
+  resize: vertical;
+
+  &:hover {
+    background-color: var(--gray-3);
+  }
+}
+
+.textarea:focus-visible {
+  outline: none;
+}
+
+.textarea::placeholder {
+  color: var(--gray-11);
+}
+
+.textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

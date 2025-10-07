@@ -1,0 +1,30 @@
+@import "mixins";
+
+.online {
+  display: none;
+
+  @include laptop() {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--gap) / 2);
+    color: var(--green);
+    padding: 0 calc(var(--space) * 2);
+    border-left: 1px solid #1D2032;
+    border-right: 1px solid #1D2032;
+  }
+
+  // Анимация мерцания
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

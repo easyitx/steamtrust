@@ -1,0 +1,106 @@
+@import "mixins";
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  padding: 48px 0;
+
+  @include tablets {
+    grid-template-columns: 2fr 1fr;
+  };
+
+  .leftSide {
+    .faq {
+      background: var(--blue-1);
+      border-radius: calc(var(--blue-radius) * 2);
+
+      .title {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--gap) / 2);
+      }
+
+      .accordions {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--gap) / 2);
+        margin-top: var(--space);
+      }
+    }
+  }
+
+  .rightSide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 58px;
+
+    gap: calc(var(--gap) / 2);
+
+    @include tablets {
+      gap: var(--gap);
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--gap) / 2);
+
+      @include tablets {
+        gap: var(--gap);
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--gap) / 2);
+        background: linear-gradient(180deg, #1B1D30 0%, #24273D 100%);
+        padding: 20px;
+        border-radius: calc(var(--border-radius) * 2);
+        min-height: 128px;
+      }
+    }
+
+    .rightCards {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--gap) / 2);
+
+      @include tablets {
+        gap: var(--gap);
+      }
+
+      .card3D {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--gap) / 2);
+        background: linear-gradient(180deg, #1B1D30 0%, #24273D 100%);
+        padding: 20px;
+        border-radius: calc(var(--border-radius) * 2);
+
+        .image {
+          margin-top: -50px;
+        }
+      }
+
+      .promoCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--gap) / 2);
+        border-radius: calc(var(--border-radius) * 2);
+        background: linear-gradient(180deg, rgba(34, 42, 38, 0.6) -13.73%, rgba(72, 94, 45, 0.6) 113.52%);
+
+        .image {
+          transform: scale(1.25);
+        }
+
+        .text {
+          padding: 20px;
+          color: var(--green);
+        }
+      }
+    }
+  }
+}

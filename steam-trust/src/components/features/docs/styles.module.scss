@@ -1,0 +1,14 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+
+  .article {
+    line-height: 25px;
+    font-size: 0.875rem;
+
+    h2 {
+      line-height: 45px;
+    }
+  }
+}

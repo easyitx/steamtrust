@@ -1,0 +1,31 @@
+.errorFallback {
+    text-align: center;
+    padding: 24px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+}
+
+.icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.title {
+    color: #dc2626;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #7f1d1d;
+}
+
+.noDataFallback {
+    text-align: center;
+    padding: 16px;
+    opacity: 0.6;
+}
+
+.noDataMessage {
+    font-style: italic;
+} 
