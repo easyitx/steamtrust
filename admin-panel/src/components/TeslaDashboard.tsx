@@ -11,7 +11,6 @@ import type {
   PromocodesListResponse, 
   CreatePromocodeRequest 
 } from '../types/api'
-import { PayStatus } from '../types/api'
 import './TeslaDashboard.css'
 
 interface TeslaDashboardProps {
