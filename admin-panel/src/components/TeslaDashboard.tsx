@@ -11,6 +11,7 @@ import type {
   PromocodesListResponse, 
   CreatePromocodeRequest 
 } from '../types/api'
+import PaymentMethods from './PaymentMethods'
 import './TeslaDashboard.css'
 
 interface TeslaDashboardProps {
@@ -291,6 +292,12 @@ const TeslaDashboard: React.FC<TeslaDashboardProps> = ({ onLogout }) => {
             Платежи
           </button>
           <button 
+            className={`nav-item ${activeSection === 'payment-methods' ? 'active' : ''}`}
+            onClick={() => setActiveSection('payment-methods')}
+          >
+            Методы оплаты
+          </button>
+          <button 
             className={`nav-item ${activeSection === 'promocodes' ? 'active' : ''}`}
             onClick={() => setActiveSection('promocodes')}
           >
@@ -496,6 +503,11 @@ const TeslaDashboard: React.FC<TeslaDashboardProps> = ({ onLogout }) => {
                 </>
               )}
             </div>
+          )}
+
+          {/* Payment Methods Section */}
+          {activeSection === 'payment-methods' && (
+            <PaymentMethods />
           )}
 
           {/* Promocodes Section */}

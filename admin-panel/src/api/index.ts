@@ -1,9 +1,12 @@
 import axios from 'axios';
 import type { TransactionQueryParams, TransactionResponse, CreatePromocodeRequest, PromocodesListResponse, PromocodesListParams } from '../types/api';
 
+// Получаем базовый URL из переменных окружения
+const baseURL = import.meta.env.VITE_API_URL || 'https://api.steamtrust.ru';
+
 // Создаем axios инстанс с базовым URL
 const api = axios.create({
-  baseURL: 'https://api.steamtrust.ru/api',
+  baseURL: `${baseURL}/api`,
   timeout: 10000, // 10 секунд таймаут
   headers: {
     'Content-Type': 'application/json',
@@ -61,6 +64,11 @@ export const apiService = {
   createPromocode: (data: CreatePromocodeRequest) => api.post('/promocode/create', data),
   updatePromocode: (id: string, data: CreatePromocodeRequest) => api.put(`/promocode/${id}`, data),
   getPromocode: (code: string) => api.get(`/promocode/${code}`),
+  
+  // Методы для работы с методами оплаты
+  getPaymentMethods: (params?: any) => api.get('/payment/methods', { params }),
+  updatePaymentMethod: (id: string, data: any) => api.put(`/payment/methods/${id}`, data),
+  createPaymentMethod: (data: any) => api.post('/payment/methods', data),
   
   // Общие методы
   get: (url: string, config?: any) => api.get(url, config),
