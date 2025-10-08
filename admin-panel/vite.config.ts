@@ -6,12 +6,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true, // Позволяет доступ с любого хоста
-    port: 5173,
+    port: 4201,
     strictPort: true,
   },
   preview: {
     host: true, // Позволяет доступ с любого хоста в режиме preview
-    port: 5173,
+    port: 4201,
     strictPort: true,
+    allowedHosts: ['admin.steamtrust.ru', 'localhost', '127.0.0.1'],
   }
 })
