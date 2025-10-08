@@ -70,7 +70,6 @@ export class PaymentsHistoryListReq extends PaginationQuery {
 
   @IsOptional()
   @IsString({ message: 'Email must be a string' })
-  @IsEmail({}, { message: 'Email must be a valid email address' })
   @Transform(({ value }) => value?.toString().trim().toLowerCase())
   email?: string;
 

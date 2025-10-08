@@ -1,0 +1,49 @@
+/* Обновленная цветовая палитра */
+:root {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #213547;
+  background-color: #f5f7fa;
+
+  --primary-gradient: linear-gradient(135deg, #667eea, #764ba2);
+  --secondary-gradient: linear-gradient(135deg, #ff6b6b, #f8e9a1);
+  --button-bg: #667eea;
+  --button-hover-bg: #764ba2;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--primary-gradient);
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-bg);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.card {
+  background: var(--card-bg);
+  box-shadow: 0 4px 6px var(--card-shadow);
+  border-radius: 12px;
+  padding: 1.5rem;
+}

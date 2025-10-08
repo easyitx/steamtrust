@@ -1,0 +1,529 @@
+/* Tesla Dashboard Styles */
+.tesla-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+}
+
+/* Sidebar */
+.tesla-sidebar {
+  width: 240px;
+  background: #1a1a1a;
+  border-right: 1px solid #333333;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.tesla-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+  border-bottom: 1px solid #333333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo-icon {
+  font-size: 24px;
+  color: #00D563;
+}
+
+.tesla-nav {
+  flex: 1;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  color: #8A8A8A;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 0;
+}
+
+.nav-item:hover {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+.nav-item.active {
+  background: #00D563;
+  color: #000000;
+  font-weight: 600;
+}
+
+.tesla-logout {
+  margin: 20px;
+  padding: 12px 20px;
+  background: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tesla-logout:hover {
+  background: #444444;
+}
+
+/* Main Content */
+.tesla-main {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #000000;
+}
+
+.tesla-header {
+  padding: 32px 40px 24px;
+  border-bottom: 1px solid #333333;
+}
+
+.tesla-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.tesla-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* Overview Section */
+.overview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.balance-card {
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 500px;
+}
+
+.balance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.balance-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.balance-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.balance-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance-label {
+  font-size: 14px;
+  color: #8A8A8A;
+}
+
+.balance-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00D563;
+}
+
+/* Loading States */
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 60px 20px;
+  color: #8A8A8A;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333333;
+  border-top: 2px solid #00D563;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tables */
+.tesla-table {
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 80px 120px 1fr 120px 300px 280px 100px;
+  background: #2a2a2a;
+  padding: 16px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8A8A8A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 80px 120px 1fr 120px 300px 280px 100px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #333333;
+  font-size: 14px;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.table-row:hover {
+  background: #2a2a2a;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.code-cell {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 12px;
+  color: #00D563;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  background: #00D563;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover:not(:disabled) {
+  background: #00B84F;
+}
+
+.action-btn:disabled {
+  background: #333333;
+  color: #8A8A8A;
+  cursor: not-allowed;
+}
+
+/* Payments Table */
+.payments-section .table-header,
+.payments-section .table-row {
+  grid-template-columns: 100px 1fr 120px 120px 100px 140px;
+}
+
+/* Promocodes Table */
+.promocodes-section .table-header,
+.promocodes-section .table-row {
+  grid-template-columns: 1fr 100px 140px 140px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.tesla-input,
+.tesla-select {
+  padding: 12px 16px;
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.tesla-input:focus,
+.tesla-select:focus {
+  outline: none;
+  border-color: #00D563;
+  box-shadow: 0 0 0 2px rgba(0, 213, 99, 0.2);
+}
+
+.tesla-input::placeholder {
+  color: #8A8A8A;
+}
+
+.tesla-select option {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Buttons */
+.tesla-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.tesla-btn.primary {
+  background: #00D563;
+  color: #000000;
+}
+
+.tesla-btn.primary:hover:not(:disabled) {
+  background: #00B84F;
+}
+
+.tesla-btn:disabled {
+  background: #333333;
+  color: #8A8A8A;
+  cursor: not-allowed;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* Create Form */
+.create-form {
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.form-row .tesla-input {
+  flex: 1;
+}
+
+/* Pagination */
+.tesla-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.tesla-pagination button {
+  width: 40px;
+  height: 40px;
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tesla-pagination button:hover:not(:disabled) {
+  background: #2a2a2a;
+  border-color: #00D563;
+}
+
+.tesla-pagination button:disabled {
+  background: #0a0a0a;
+  border-color: #222222;
+  color: #444444;
+  cursor: not-allowed;
+}
+
+.tesla-pagination span {
+  font-size: 14px;
+  color: #8A8A8A;
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tesla-content {
+    padding: 24px;
+  }
+  
+  .table-header,
+  .table-row {
+    font-size: 12px;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tesla-sidebar {
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .tesla-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .tesla-main {
+    margin-left: 0;
+    width: 100vw;
+  }
+  
+  .tesla-header {
+    padding: 20px 24px;
+  }
+  
+  .tesla-header h1 {
+    font-size: 24px;
+  }
+  
+  .tesla-content {
+    padding: 20px;
+  }
+  
+  .balance-card {
+    padding: 24px;
+  }
+  
+  .tesla-table {
+    overflow-x: auto;
+  }
+  
+  .table-header,
+  .table-row {
+    min-width: 800px;
+  }
+  
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .tesla-header {
+    padding: 16px 20px;
+  }
+  
+  .tesla-content {
+    padding: 16px;
+  }
+  
+  .balance-card {
+    padding: 20px;
+  }
+  
+  .tesla-pagination {
+    gap: 12px;
+  }
+  
+  .tesla-pagination button {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 213, 99, 0.3);
+  color: #ffffff;
+}

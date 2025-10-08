@@ -1,0 +1,26 @@
+# Robots.txt for SteamTrust Admin Panel
+# This admin panel should not be indexed by search engines
+
+User-agent: *
+Disallow: /
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+# No sitemap provided for admin panel
